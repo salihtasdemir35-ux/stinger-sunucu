@@ -1,0 +1,15 @@
+# Render.com "Blueprint" dosyası — depoyu Render'a bağlayınca sunucuyu otomatik kurar.
+services:
+  - type: web
+    name: stinger-sunucu
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      # İsteğe bağlı ama önerilir: liderlik kayıtları kalıcı olsun diye (upstash.com → ücretsiz Redis)
+      - key: UPSTASH_REDIS_REST_URL
+        sync: false
+      - key: UPSTASH_REDIS_REST_TOKEN
+        sync: false

@@ -1,0 +1,13 @@
+{
+  "name": "stinger-sunucu",
+  "version": "1.1.0",
+  "description": "STINGER – Interceptor Challenge online sunucusu: liderlik, hızlı maç, turnuva, canlı izleme, sohbet",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test-server.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": { "ws": "^8.18.0" }
+}
